@@ -192,6 +192,29 @@ blockquote {
   border-left-color: #ff8caa;
 }
 
+.panel-tabset .nav-tabs {
+  border-bottom-color: rgba(88, 215, 232, 0.32);
+}
+
+.panel-tabset .nav-tabs .nav-link {
+  color: #94afc2;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.panel-tabset .nav-tabs .nav-link:hover,
+.panel-tabset .nav-tabs .nav-link:focus {
+  color: var(--csq-cyan);
+  border-color: rgba(88, 215, 232, 0.30);
+}
+
+.panel-tabset .nav-tabs .nav-link.active,
+.panel-tabset .nav-tabs .nav-item.show .nav-link {
+  color: var(--csq-text);
+  background-color: rgba(16, 27, 42, 0.96);
+  border-color: rgba(88, 215, 232, 0.46) rgba(88, 215, 232, 0.46) rgba(16, 27, 42, 0.96);
+}
+
 code:not(.sourceCode) {
   color: #ff8caa;
   background-color: rgba(16, 27, 42, 0.92);

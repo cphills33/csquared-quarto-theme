@@ -27,6 +27,33 @@ scores <- c(0.12, 0.18, 0.31, 0.27)
 mean(scores)
 ```
 
+## Example Tabset
+
+::: {.panel-tabset}
+
+### Load Pacman
+
+Makes it easy to install and load multiple packages.
+
+```{r}
+#| echo: true
+if (!require("pacman")) {
+  install.packages("pacman", dependencies = TRUE)
+  require(pacman)
+}
+```
+
+### Import Data
+
+Keeps import logic separate from cleaning logic.
+
+```{r}
+#| echo: true
+data_path <- "data/saiat.csv"
+```
+
+:::
+
 ## Example Table
 
 | Construct | Document role |

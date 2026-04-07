@@ -190,6 +190,29 @@ blockquote {
   border-left-color: var(--csq-rose);
 }
 
+.panel-tabset .nav-tabs {
+  border-bottom-color: rgba(44, 141, 131, 0.30);
+}
+
+.panel-tabset .nav-tabs .nav-link {
+  color: #5e7079;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.panel-tabset .nav-tabs .nav-link:hover,
+.panel-tabset .nav-tabs .nav-link:focus {
+  color: var(--csq-cyan);
+  border-color: rgba(44, 141, 131, 0.26);
+}
+
+.panel-tabset .nav-tabs .nav-link.active,
+.panel-tabset .nav-tabs .nav-item.show .nav-link {
+  color: var(--csq-text);
+  background-color: rgba(247, 251, 250, 0.94);
+  border-color: rgba(44, 141, 131, 0.40) rgba(44, 141, 131, 0.40) rgba(247, 251, 250, 0.94);
+}
+
 code:not(.sourceCode) {
   color: var(--csq-rose);
   background-color: rgba(234, 244, 243, 0.92);
