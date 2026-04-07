@@ -1,0 +1,265 @@
+/*-- scss:defaults --*/
+
+// C-Squared Paper Wash
+// Adapted from the C-Squared RStudio Paper Wash palette for Quarto HTML.
+
+$body-bg: #f7fbfa !default;
+$body-color: #263540 !default;
+$link-color: #1f7185 !default;
+$link-hover-color: #b93e63 !default;
+
+$font-family-sans-serif: "Avenir Next", Avenir, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif !default;
+$font-family-monospace: "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace !default;
+$font-size-root: 17px !default;
+$line-height-base: 1.65 !default;
+
+$primary: #1f7185 !default;
+$secondary: #6e7e88 !default;
+$success: #397a68 !default;
+$info: #2c8d83 !default;
+$warning: #a86b1e !default;
+$danger: #b93e63 !default;
+$light: #eaf4f3 !default;
+$dark: #263540 !default;
+
+$headings-color: #21313b !default;
+$headings-font-family: $font-family-sans-serif !default;
+$headings-font-weight: 700 !default;
+$h1-font-size: 2.45rem !default;
+$h2-font-size: 1.55rem !default;
+$h3-font-size: 1.22rem !default;
+
+$border-color: #d8e6e3 !default;
+$border-radius: 8px !default;
+$border-radius-sm: 6px !default;
+$border-radius-lg: 8px !default;
+$btn-border-radius: 8px !default;
+
+$code-color: #b93e63 !default;
+$code-bg: #eaf4f3 !default;
+$code-block-bg: #eef7f6 !default;
+$code-block-border-left: #2c8d83 !default;
+$code-block-border-left-size: 4px !default;
+$code-block-padding-left: 1rem !default;
+
+$table-color: $body-color !default;
+$table-border-color: #c9ddda !default;
+$table-striped-bg: rgba(135, 205, 214, 0.10) !default;
+
+$navbar-bg: #eaf4f3 !default;
+$navbar-fg: #263540 !default;
+$navbar-hl: #b93e63 !default;
+
+/*-- scss:rules --*/
+
+:root {
+  --csq-bg: #f7fbfa;
+  --csq-surface: #eef7f6;
+  --csq-surface-strong: #eaf4f3;
+  --csq-text: #263540;
+  --csq-muted: #6e7e88;
+  --csq-border: #d8e6e3;
+  --csq-cyan: #1f7185;
+  --csq-teal: #2c8d83;
+  --csq-rose: #b93e63;
+  --csq-coral: #d96d58;
+  --csq-gold: #a86b1e;
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 4%, rgba(135, 205, 214, 0.24), transparent 24rem),
+    radial-gradient(circle at 96% 8%, rgba(185, 62, 99, 0.13), transparent 20rem),
+    linear-gradient(180deg, #f7fbfa 0%, #f4faf9 48%, #eef7f6 100%);
+  color: var(--csq-text);
+}
+
+a {
+  text-decoration-color: rgba(31, 113, 133, 0.34);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+}
+
+a:hover,
+a:focus {
+  text-decoration-color: rgba(185, 62, 99, 0.72);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: normal;
+}
+
+h2 {
+  border-bottom: 1px solid rgba(44, 141, 131, 0.22);
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  color: #1f7185;
+}
+
+main section.level2,
+main section.level3 {
+  isolation: isolate;
+  position: relative;
+}
+
+main section.level2::before {
+  background:
+    radial-gradient(ellipse 34rem 9rem at 18% 46%, rgba(135, 205, 214, 0.18), transparent 68%),
+    radial-gradient(ellipse 26rem 8rem at 72% 42%, rgba(217, 109, 88, 0.10), transparent 72%),
+    linear-gradient(90deg, transparent 0%, rgba(234, 244, 243, 0.34) 26%, transparent 76%);
+  content: "";
+  height: 12rem;
+  left: 50%;
+  opacity: 0.86;
+  pointer-events: none;
+  position: absolute;
+  top: -2rem;
+  transform: translateX(-50%);
+  width: min(100vw, 64rem);
+  z-index: -1;
+}
+
+main section.level2:nth-of-type(3n + 2)::before {
+  background:
+    radial-gradient(ellipse 32rem 9rem at 82% 44%, rgba(44, 141, 131, 0.16), transparent 70%),
+    radial-gradient(ellipse 24rem 8rem at 24% 38%, rgba(185, 62, 99, 0.10), transparent 72%),
+    linear-gradient(90deg, transparent 0%, rgba(234, 244, 243, 0.28) 42%, transparent 88%);
+}
+
+main section.level2:nth-of-type(3n + 3)::before {
+  background:
+    radial-gradient(ellipse 30rem 8rem at 14% 48%, rgba(168, 107, 30, 0.10), transparent 70%),
+    radial-gradient(ellipse 30rem 9rem at 76% 42%, rgba(31, 113, 133, 0.15), transparent 72%),
+    linear-gradient(90deg, transparent 0%, rgba(234, 244, 243, 0.25) 34%, transparent 82%);
+}
+
+blockquote {
+  border-left: 4px solid var(--csq-rose);
+  color: #40525d;
+  background: rgba(234, 244, 243, 0.68);
+  padding: 0.85rem 1rem;
+}
+
+.quarto-title-banner {
+  background:
+    radial-gradient(circle at 11% 14%, rgba(44, 141, 131, 0.26), transparent 18rem),
+    radial-gradient(circle at 88% 12%, rgba(217, 109, 88, 0.20), transparent 18rem),
+    linear-gradient(135deg, #eaf4f3 0%, #f7fbfa 54%, #edf7f6 100%);
+  border-bottom: 1px solid var(--csq-border);
+  color: var(--csq-text);
+}
+
+.quarto-title-banner .title,
+.quarto-title-banner .subtitle,
+.quarto-title-banner .quarto-title-meta-heading,
+.quarto-title-banner .quarto-title-meta-contents {
+  color: var(--csq-text);
+}
+
+.quarto-title-banner .subtitle {
+  color: #557a94;
+}
+
+.quarto-title .quarto-categories .quarto-category {
+  border-color: rgba(44, 141, 131, 0.32);
+  color: #1f7185;
+  background-color: rgba(135, 205, 214, 0.16);
+}
+
+#TOC,
+.sidebar nav[role="doc-toc"] {
+  color: var(--csq-muted);
+}
+
+#TOC a,
+.sidebar nav[role="doc-toc"] ul > li > a {
+  color: #5e7079;
+  border-left-color: rgba(44, 141, 131, 0.20);
+}
+
+#TOC a.active,
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+  color: var(--csq-rose) !important;
+  border-left-color: var(--csq-rose);
+}
+
+code:not(.sourceCode) {
+  color: var(--csq-rose);
+  background-color: rgba(234, 244, 243, 0.92);
+  border: 1px solid rgba(201, 221, 218, 0.85);
+  border-radius: 6px;
+  padding: 0.12rem 0.28rem;
+}
+
+pre,
+div.sourceCode {
+  background-color: var(--csq-surface);
+  border: 1px solid rgba(201, 221, 218, 0.92);
+  border-left: 4px solid var(--csq-teal);
+  border-radius: 8px;
+}
+
+div.sourceCode pre.sourceCode {
+  border: 0;
+  border-radius: 0;
+}
+
+.cell-output,
+.cell-output-display {
+  border-left: 4px solid rgba(168, 107, 30, 0.46);
+  background-color: rgba(234, 244, 243, 0.52);
+  padding-left: 0.85rem;
+}
+
+table,
+.table {
+  border-color: var(--csq-border);
+}
+
+thead,
+.table thead {
+  border-bottom: 2px solid rgba(44, 141, 131, 0.38);
+}
+
+caption,
+.table caption {
+  color: var(--csq-muted);
+}
+
+.callout {
+  border-radius: 8px;
+  border-color: rgba(44, 141, 131, 0.26);
+  background-color: rgba(247, 251, 250, 0.72);
+}
+
+.callout.callout-style-default > .callout-header {
+  background-color: rgba(135, 205, 214, 0.18);
+}
+
+.callout-note {
+  border-left-color: var(--csq-cyan);
+}
+
+.callout-tip {
+  border-left-color: var(--csq-teal);
+}
+
+.callout-warning {
+  border-left-color: var(--csq-gold);
+}
+
+.callout-important {
+  border-left-color: var(--csq-rose);
+}
+
+.btn,
+.quarto-btn-toggle {
+  border-radius: 8px;
+}

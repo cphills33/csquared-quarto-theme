@@ -1,0 +1,268 @@
+/*-- scss:defaults --*/
+
+// C-Squared Night Bloom
+// Adapted from the C-Squared RStudio Night Bloom palette for Quarto HTML.
+
+$body-bg: #0a111d !default;
+$body-color: #eaf4f3 !default;
+$link-color: #58d7e8 !default;
+$link-hover-color: #ff8caa !default;
+
+$font-family-sans-serif: "Avenir Next", Avenir, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif !default;
+$font-family-monospace: "SFMono-Regular", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace !default;
+$font-size-root: 17px !default;
+$line-height-base: 1.65 !default;
+
+$primary: #58d7e8 !default;
+$secondary: #7c91a3 !default;
+$success: #8bd66f !default;
+$info: #42c7b7 !default;
+$warning: #e2b84b !default;
+$danger: #ff5c7a !default;
+$light: #eaf4f3 !default;
+$dark: #0a111d !default;
+
+$headings-color: #f6fbfa !default;
+$headings-font-family: $font-family-sans-serif !default;
+$headings-font-weight: 700 !default;
+$h1-font-size: 2.45rem !default;
+$h2-font-size: 1.55rem !default;
+$h3-font-size: 1.22rem !default;
+
+$border-color: #24364a !default;
+$border-radius: 8px !default;
+$border-radius-sm: 6px !default;
+$border-radius-lg: 8px !default;
+$btn-border-radius: 8px !default;
+
+$code-color: #ff8caa !default;
+$code-bg: #101b2a !default;
+$code-block-bg: #101b2a !default;
+$code-block-border-left: #42c7b7 !default;
+$code-block-border-left-size: 4px !default;
+$code-block-padding-left: 1rem !default;
+
+$table-color: $body-color !default;
+$table-border-color: #2b4257 !default;
+$table-striped-bg: rgba(88, 215, 232, 0.06) !default;
+
+$navbar-bg: #070d16 !default;
+$navbar-fg: #eaf4f3 !default;
+$navbar-hl: #58d7e8 !default;
+
+/*-- scss:rules --*/
+
+:root {
+  --csq-bg: #0a111d;
+  --csq-surface: #101b2a;
+  --csq-surface-strong: #111c2b;
+  --csq-text: #eaf4f3;
+  --csq-muted: #94afc2;
+  --csq-border: #24364a;
+  --csq-cyan: #58d7e8;
+  --csq-teal: #42c7b7;
+  --csq-rose: #f06a92;
+  --csq-coral: #ff5c7a;
+  --csq-gold: #e2b84b;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 4%, rgba(88, 215, 232, 0.15), transparent 24rem),
+    radial-gradient(circle at 92% 10%, rgba(240, 106, 146, 0.12), transparent 22rem),
+    linear-gradient(180deg, #0a111d 0%, #0b1422 52%, #070d16 100%);
+  color: var(--csq-text);
+}
+
+a {
+  color: var(--csq-cyan);
+  text-decoration-color: rgba(88, 215, 232, 0.44);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+}
+
+a:hover,
+a:focus {
+  color: #ff8caa;
+  text-decoration-color: rgba(255, 140, 170, 0.76);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: normal;
+}
+
+h2 {
+  border-bottom: 1px solid rgba(66, 199, 183, 0.28);
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  color: #7de7f2;
+}
+
+main section.level2,
+main section.level3 {
+  isolation: isolate;
+  position: relative;
+}
+
+main section.level2::before {
+  background:
+    radial-gradient(ellipse 34rem 9rem at 18% 46%, rgba(88, 215, 232, 0.14), transparent 68%),
+    radial-gradient(ellipse 26rem 8rem at 72% 42%, rgba(255, 92, 122, 0.10), transparent 72%),
+    linear-gradient(90deg, transparent 0%, rgba(16, 27, 42, 0.44) 26%, transparent 76%);
+  content: "";
+  height: 12rem;
+  left: 50%;
+  opacity: 0.88;
+  pointer-events: none;
+  position: absolute;
+  top: -2rem;
+  transform: translateX(-50%);
+  width: min(100vw, 64rem);
+  z-index: -1;
+}
+
+main section.level2:nth-of-type(3n + 2)::before {
+  background:
+    radial-gradient(ellipse 32rem 9rem at 82% 44%, rgba(66, 199, 183, 0.14), transparent 70%),
+    radial-gradient(ellipse 24rem 8rem at 24% 38%, rgba(240, 106, 146, 0.11), transparent 72%),
+    linear-gradient(90deg, transparent 0%, rgba(16, 27, 42, 0.38) 42%, transparent 88%);
+}
+
+main section.level2:nth-of-type(3n + 3)::before {
+  background:
+    radial-gradient(ellipse 30rem 8rem at 14% 48%, rgba(226, 184, 75, 0.10), transparent 70%),
+    radial-gradient(ellipse 30rem 9rem at 76% 42%, rgba(88, 215, 232, 0.13), transparent 72%),
+    linear-gradient(90deg, transparent 0%, rgba(16, 27, 42, 0.34) 34%, transparent 82%);
+}
+
+blockquote {
+  border-left: 4px solid var(--csq-rose);
+  color: #d4e6e7;
+  background: rgba(16, 27, 42, 0.78);
+  padding: 0.85rem 1rem;
+}
+
+.quarto-title-banner {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(66, 199, 183, 0.22), transparent 20rem),
+    radial-gradient(circle at 90% 18%, rgba(255, 92, 122, 0.16), transparent 19rem),
+    linear-gradient(135deg, #070d16 0%, #0a111d 50%, #101b2a 100%);
+  border-bottom: 1px solid var(--csq-border);
+  color: var(--csq-text);
+}
+
+.quarto-title-banner .title,
+.quarto-title-banner .subtitle,
+.quarto-title-banner .quarto-title-meta-heading,
+.quarto-title-banner .quarto-title-meta-contents {
+  color: var(--csq-text);
+}
+
+.quarto-title-banner .subtitle {
+  color: #94afc2;
+}
+
+.quarto-title .quarto-categories .quarto-category {
+  border-color: rgba(88, 215, 232, 0.34);
+  color: #7de7f2;
+  background-color: rgba(88, 215, 232, 0.10);
+}
+
+#TOC,
+.sidebar nav[role="doc-toc"] {
+  color: var(--csq-muted);
+}
+
+#TOC a,
+.sidebar nav[role="doc-toc"] ul > li > a {
+  color: #94afc2;
+  border-left-color: rgba(88, 215, 232, 0.18);
+}
+
+#TOC a.active,
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+  color: #ff8caa !important;
+  border-left-color: #ff8caa;
+}
+
+code:not(.sourceCode) {
+  color: #ff8caa;
+  background-color: rgba(16, 27, 42, 0.92);
+  border: 1px solid rgba(43, 66, 87, 0.90);
+  border-radius: 6px;
+  padding: 0.12rem 0.28rem;
+}
+
+pre,
+div.sourceCode {
+  background-color: var(--csq-surface);
+  border: 1px solid rgba(43, 66, 87, 0.95);
+  border-left: 4px solid var(--csq-teal);
+  border-radius: 8px;
+}
+
+div.sourceCode pre.sourceCode {
+  border: 0;
+  border-radius: 0;
+}
+
+.cell-output,
+.cell-output-display {
+  border-left: 4px solid rgba(226, 184, 75, 0.58);
+  background-color: rgba(16, 27, 42, 0.66);
+  padding-left: 0.85rem;
+}
+
+table,
+.table {
+  border-color: var(--csq-border);
+  color: var(--csq-text);
+}
+
+thead,
+.table thead {
+  border-bottom: 2px solid rgba(66, 199, 183, 0.44);
+}
+
+caption,
+.table caption {
+  color: var(--csq-muted);
+}
+
+.callout {
+  border-radius: 8px;
+  border-color: rgba(88, 215, 232, 0.20);
+  background-color: rgba(10, 17, 29, 0.72);
+}
+
+.callout.callout-style-default > .callout-header {
+  background-color: rgba(88, 215, 232, 0.11);
+}
+
+.callout-note {
+  border-left-color: var(--csq-cyan);
+}
+
+.callout-tip {
+  border-left-color: var(--csq-teal);
+}
+
+.callout-warning {
+  border-left-color: var(--csq-gold);
+}
+
+.callout-important {
+  border-left-color: var(--csq-rose);
+}
+
+.btn,
+.quarto-btn-toggle {
+  border-radius: 8px;
+}

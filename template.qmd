@@ -1,0 +1,42 @@
+---
+title: "C-Squared Quarto Theme"
+subtitle: "Paper Wash and Night Bloom for analysis documents"
+author: "Curtis Phills"
+toc: true
+title-block-banner: true
+format:
+  csquared-html:
+    embed-resources: true
+---
+
+## Overview
+
+This document is a small rendering check for the C-Squared Quarto theme. It should feel clear, academic, artistic, and readable in both light and dark mode.
+
+## Example Text
+
+Bias is not inevitable. Reducing bias requires sustained effort, careful evidence, and attention to the social systems that shape perception.
+
+> Intersectionality is not an add-on. It is part of social reality.
+
+## Example Code
+
+```{r}
+#| echo: true
+scores <- c(0.12, 0.18, 0.31, 0.27)
+mean(scores)
+```
+
+## Example Table
+
+| Construct | Document role |
+|---|---|
+| Implicit bias | Core topic |
+| Intersectionality | Organizing frame |
+| Prejudice reduction | Applied payoff |
+
+## Callout
+
+::: {.callout-note}
+The theme should add personality without making analysis documents feel decorative or hard to scan.
+:::
