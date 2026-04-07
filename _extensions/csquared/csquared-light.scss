@@ -174,20 +174,42 @@ blockquote {
 }
 
 #TOC,
+#quarto-margin-sidebar,
 .sidebar nav[role="doc-toc"] {
-  color: var(--csq-muted);
+  color: #40525d;
+}
+
+#TOC .toc-title,
+.sidebar nav[role="doc-toc"] .toc-title {
+  color: var(--csq-text);
+  font-weight: 700;
 }
 
 #TOC a,
+.sidebar nav[role="doc-toc"] .nav-link,
 .sidebar nav[role="doc-toc"] ul > li > a {
-  color: #5e7079;
+  color: #40525d;
   border-left-color: rgba(44, 141, 131, 0.20);
+  opacity: 1;
+}
+
+#TOC a:hover,
+#TOC a:focus,
+.sidebar nav[role="doc-toc"] .nav-link:hover,
+.sidebar nav[role="doc-toc"] .nav-link:focus,
+.sidebar nav[role="doc-toc"] ul > li > a:hover,
+.sidebar nav[role="doc-toc"] ul > li > a:focus {
+  color: var(--csq-cyan);
+  border-left-color: rgba(44, 141, 131, 0.44);
 }
 
 #TOC a.active,
+.sidebar nav[role="doc-toc"] .nav-link.active,
 .sidebar nav[role="doc-toc"] ul > li > a.active {
   color: var(--csq-rose) !important;
   border-left-color: var(--csq-rose);
+  font-weight: 700;
+  opacity: 1;
 }
 
 .panel-tabset .nav-tabs {
