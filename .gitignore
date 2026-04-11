@@ -2,3 +2,6 @@
 /_site/
 /*_files/
 /*.html
+~$*
+/_extensions/csquared/powerpoint/*.pptx
+/_extensions/csquared/powerpoint/*.potx
